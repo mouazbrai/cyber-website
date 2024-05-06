@@ -1,6 +1,6 @@
 
 /**Main Effect Script */
-let obj = fetch('/data.json');
+let obj = fetch('data.json');
 let allComands = [];
 obj.then(async (result)=> {
     let myData = await result.json();
@@ -48,7 +48,6 @@ function boxDrag(e){
 	let rot = 0;
 	let elRect = e.clientX - rect.left;
 	imgsBox.style.transform = `translateX(${-(elRect)}px)`;
-	console.log(elRect);
 }
 books.addEventListener("mousedown", () => {
 	eventCase = true;
