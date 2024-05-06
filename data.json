@@ -1,0 +1,14 @@
+{
+    "sudoCommands": [
+        "sudo apt-get update",
+        "sudo apt-get upgrade"
+    ],
+    "pythonPip": [
+        "pip install numpy",
+        "pip install requests"
+    ],
+    "npmPack": [
+        "npm install helmet",
+        "npm install bcrypt"
+    ]
+}

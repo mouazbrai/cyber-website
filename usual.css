@@ -1,0 +1,279 @@
+/*General Style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: main-font;
+    src: url("GraphikBold.otf");
+}
+:root{
+    --main-color: #fff;
+    --sec-color: green;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.66) , rgba(0, 0, 0, 0.66)), url("bg.jpg") ;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: main-font;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*All Style */
+.all-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -1;
+}
+.grid > div{
+    width: 50%;
+}
+.btns {
+    margin-top: 2.5rem;
+}
+.btn{
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 1rem;
+    text-transform: capitalize;
+    transition: opacity .8s;
+    border: 0;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: .8;
+}
+.btn.btn-1{
+    background-color: var(--sec-color);
+    color: var(--main-color);
+}
+.btn.btn-2{
+    color: #000;
+    background-color: var(--main-color);
+}
+.all-paragraph {
+    line-height: 1.5;
+    margin: 1.4rem 0;
+    font-size: .9rem;
+    color: var(--main-color);   
+}
+.full-sc-cont{
+    display: block;
+    width: 90% !important;
+    margin: auto;
+}
+/*Navbar All Style*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+nav .logo{
+    color: var(--main-color);
+    font-size: 1.4rem;
+}
+nav ul{
+    display: flex;
+}
+nav ul li {
+    margin-right: 1rem;
+}
+nav ul li a{
+    color: var(--main-color);
+    display: inline-block;
+    padding: 10px;
+    font-size: .9rem;
+    transition: color .8s;
+}
+nav ul li a:hover{
+    color: var(--sec-color);
+}
+nav .list-btn{
+    width: 35px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
+.list-btn:hover  .btn-col{
+    width: 100%;
+}
+nav .list-btn span{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: red;
+    transition: .8s width;
+}
+nav .list-btn span:nth-child(2){
+    width: 80%;
+}
+nav .list-btn span:nth-child(3){
+    width: 50%;
+}
+/*Login Signup Style*/
+.log-up{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s , opacity 1s;
+    z-index: 10;
+}
+.log-up .cover{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+.log-forms{
+    width: 550px;
+    height: 75%;
+    background-color: var(--main-color);
+    z-index: 20;
+}
+.log-forms .log-content{
+    height: 90%;
+    width: 90%;
+    border: 1px solid #ccc;
+    position: relative;
+    padding: 60px 40px;
+}
+.log-forms .log-content .log-switch{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+.log-forms .log-content .log-switch > div{
+    width: 100%;
+    padding: 15px 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+.log-switch-active{
+    border: 0 !important;
+    background-color: var(--main-color) !important;
+    border-top: 2px solid var(--sec-color) !important;
+}
+.log-forms .log-content .form{
+    width: 100%;
+}
+.log-forms .log-content .text-box{
+    display: flex;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px 5px;
+    margin-top: 15px;
+}
+.log-forms .log-content .text-box input{
+    width: 100%;
+    display: block;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 15px;
+    margin-left: 15px;
+}
+.log-forms .log-content .text-box i{
+    font-size: 20px;
+}
+.log-forms .log-content .log-btn{
+    display: inline-block;
+    margin: 20px 0;
+    width: 100% !important;
+    text-align: center;
+    font-size: 15px;
+}
+.log-forms .log-content .forget{
+    margin-top: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.log-forms .log-content .forget input {
+    margin-right: 10px;
+}
+.log-forms .log-content .forget a{
+    color: #929090;
+}
+.log-forms .log-content .policy{
+    margin-top: 25px;
+    color: #929090;
+    font-size: 12px;
+}
+.log-forms .log-content .policy a{
+    color: var(--sec-color);
+}
+/*Media Query For Mobile*/
+@media screen and (max-width:768px) {
+    
+    nav{
+        position: fixed;
+        width: 100%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: #000000b3;
+    }
+    .grid > div{
+        width:100%;
+    }
+    nav .nav-links{
+        padding: 20px;
+        flex-direction: column;
+        position: fixed;
+        top: 56px;
+        right: -200px;
+        transition: right .8s;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: #000000b3;
+    }
+    nav .list-btn{
+        display: flex;
+    }
+    .nav-links-active{
+        right: 0 !important;
+    }
+    .books{
+        width: 100% !important;
+    }
+    .services-content{
+        padding-top: 68px;
+    }
+    /*Buy Card Query*/
+    .buy-card .buy-content{
+        border-radius: 0 !important;
+        height: 300px;
+    }
+}
+@media screen and (max-width:300px) , screen and(max-height:350px){
+    :root{
+        font-size: 13px;
+    }
+}
