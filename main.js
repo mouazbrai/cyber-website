@@ -1,6 +1,6 @@
 
 /**Main Effect Script */
-let obj = fetch('data.json');
+let obj = fetch('./data.json');
 let allComands = [];
 obj.then(async (result)=> {
     let myData = await result.json();
